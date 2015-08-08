@@ -25,6 +25,8 @@ data$DateTime <- as.POSIXct(paste(data$Date, data$Time), format="%Y-%m-%d %H:%M:
 plot(Sub_metering_1 ~ DateTime, data = data, type="s", ylab="Energy sub metering")
 lines(Sub_metering_2 ~ DateTime, data = data, type="s", col="red")
 lines(Sub_metering_3 ~ DateTime, data = data, type="s", col="blue")
+legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
+       col = c("black", "red", "blue"), lwd=2)
 dev.copy(png,'plot3.png')
 dev.off()
 
