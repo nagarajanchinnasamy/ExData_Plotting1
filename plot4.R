@@ -33,6 +33,8 @@ plot(Voltage ~ DateTime, data = data, type="s", ylab="Global Active Power (kilow
 plot(Sub_metering_1 ~ DateTime, data = data, type="s", ylab="Energy sub metering")
 lines(Sub_metering_2 ~ DateTime, data = data, type="s", col="red")
 lines(Sub_metering_3 ~ DateTime, data = data, type="s", col="blue")
+legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
+       col = c("black", "red", "blue"), cex = 0.6, lwd=2)
 
 plot(Global_reactive_power ~ DateTime, data = data, type="s", ylab="Global Reactive Power (kilowatts)")
 
